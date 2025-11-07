@@ -46,7 +46,7 @@ const Hero = () => {
             text="Celebrating 185 Years of Faridpur Zilla School"
             className="font-signature text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-heritage-gold mb-4 sm:mb-6 leading-tight"
             delay={0.5}
-            speed={0.02}
+            speed={0.01}
           />
 
           {/* Subline */}
