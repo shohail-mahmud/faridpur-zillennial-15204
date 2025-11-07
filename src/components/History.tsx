@@ -44,9 +44,9 @@ const History = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <HandwritingReveal className="font-script text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-primary mb-4 sm:mb-6 px-4" delay={0.2}>
+          <h2 className="font-script text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-primary mb-4 sm:mb-6 px-4">
             Our Journey Through Time
-          </HandwritingReveal>
+          </h2>
           <div className="w-20 sm:w-24 h-1 bg-heritage-gold mx-auto mb-6 sm:mb-8" />
           <p className="text-base sm:text-lg md:text-xl text-foreground/70 max-w-3xl mx-auto px-4">
             From 1840 to today, Faridpur Zilla School has been at the forefront of educational excellence in Bangladesh
@@ -81,12 +81,9 @@ const History = () => {
               
               <div className="flex-1">
                 <div className="bg-card p-6 sm:p-8 rounded-lg shadow-elegant border border-border">
-                  <HandwritingReveal 
-                    className="font-script text-2xl sm:text-3xl text-primary mb-3 sm:mb-4"
-                    delay={index * 0.2 + 0.5}
-                  >
+                  <h3 className="font-script text-2xl sm:text-3xl text-primary mb-3 sm:mb-4">
                     {milestone.title}
-                  </HandwritingReveal>
+                  </h3>
                   <motion.p 
                     className="text-sm sm:text-base text-foreground/70 leading-relaxed"
                     initial={{ opacity: 0 }}

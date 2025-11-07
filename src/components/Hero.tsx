@@ -15,6 +15,18 @@ const Hero = () => {
           allow="autoplay; encrypted-media"
           loading="lazy"
         />
+        
+        {/* Video Caption */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.5 }}
+          className="absolute bottom-4 right-4 z-20 bg-black/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-heritage-gold/30"
+        >
+          <p className="text-xs sm:text-sm text-heritage-gold font-medium">
+            Rag Day 2010 - Faridpur Zilla School
+          </p>
+        </motion.div>
       </div>
 
       {/* Content Overlay */}
