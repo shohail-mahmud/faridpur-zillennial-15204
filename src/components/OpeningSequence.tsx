@@ -57,7 +57,7 @@ const OpeningSequence = ({ onComplete }: OpeningSequenceProps) => {
                 delay: 0.3,
                 ease: [0.25, 0.46, 0.45, 0.94],
               }}
-              className="font-serif font-bold text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-heritage-gold mb-3 sm:mb-4 md:mb-6"
+              className="font-signature text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-heritage-gold mb-3 sm:mb-4 md:mb-6"
             >
               Faridpur Zilla School
             </motion.h1>

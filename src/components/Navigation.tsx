@@ -16,11 +16,19 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
     setIsMobileMenuOpen(false);
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    }, 300);
   };
 
   const menuItems = ["About", "History", "Gallery", "Contact"];
@@ -90,30 +98,40 @@ const Navigation = () => {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-primary/98 backdrop-blur-md border-t border-heritage-gold/20"
-          >
-            <div className="container mx-auto px-4 py-4">
-              <div className="flex flex-col space-y-4">
-                {menuItems.map((item, index) => (
-                  <motion.button
-                    key={item}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    onClick={() => scrollToSection(item.toLowerCase())}
-                    className="text-primary-foreground hover:text-heritage-gold transition-colors duration-300 font-medium text-base text-left py-2 border-b border-heritage-gold/10 last:border-b-0"
-                  >
-                    {item}
-                  </motion.button>
-                ))}
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-primary/40 backdrop-blur-sm z-40 md:hidden"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative z-50 md:hidden bg-primary/98 backdrop-blur-md border-t border-heritage-gold/20 shadow-elegant"
+            >
+              <div className="container mx-auto px-4 py-4">
+                <div className="flex flex-col space-y-4">
+                  {menuItems.map((item, index) => (
+                    <motion.button
+                      key={item}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      onClick={() => scrollToSection(item.toLowerCase())}
+                      className="text-primary-foreground hover:text-heritage-gold transition-colors duration-300 font-medium text-base text-left py-3 border-b border-heritage-gold/10 last:border-b-0 active:text-heritage-gold"
+                    >
+                      {item}
+                    </motion.button>
+                  ))}
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.nav>

@@ -17,7 +17,7 @@ const Hero = () => {
       </div>
 
       {/* Content Overlay */}
-      <div className="relative z-20 w-full flex flex-col items-center justify-center text-center px-4 sm:px-6 py-20 sm:py-24">
+      <div className="relative z-20 w-full flex flex-col items-center justify-center text-center px-4 sm:px-6 py-16 sm:py-20 min-h-screen">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
