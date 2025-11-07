@@ -3,16 +3,17 @@ import SignatureText from "./SignatureText";
 import TypingText from "./TypingText";
 import schoolLogo from "@/assets/school-logo.png";
 const Hero = () => {
-  return <section className="relative min-h-screen w-full overflow-hidden flex items-center">
+    return <section className="relative min-h-screen w-full overflow-hidden flex items-center">
       {/* Video Background - Zoomed for better coverage */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-hero z-10" />
         <iframe 
-          className="absolute top-1/2 left-1/2 w-[140vw] h-[140vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none" 
+          className="absolute top-1/2 left-1/2 w-[140vw] h-[140vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          style={{ border: 0, transform: 'translate(-50%, -50%) translateZ(0)', willChange: 'auto' }}
           src="https://www.youtube.com/embed/yaM4KvskYT8?autoplay=1&mute=1&loop=1&playlist=yaM4KvskYT8&controls=0&showinfo=0&modestbranding=1&rel=0" 
           title="Faridpur Zilla School Rag Day 2010" 
-          allow="autoplay; encrypted-media" 
-          style={{ border: 0 }}
+          allow="autoplay; encrypted-media"
+          loading="lazy"
         />
       </div>
 
@@ -42,12 +43,14 @@ const Hero = () => {
           </motion.div>
 
           {/* Typing effect for main heading */}
-          <TypingText
-            text="Celebrating 185 Years of Faridpur Zilla School"
-            className="font-signature text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-heritage-gold mb-4 sm:mb-6 leading-tight"
-            delay={0.5}
-            speed={0.01}
-          />
+          <div className="min-h-[4rem] sm:min-h-[5rem] md:min-h-[7rem] lg:min-h-[8rem] flex items-center justify-center">
+            <TypingText
+              text="Celebrating 185 Years of Faridpur Zilla School"
+              className="font-signature text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-heritage-gold mb-4 sm:mb-6 leading-tight"
+              delay={0.5}
+              speed={0.01}
+            />
+          </div>
 
           {/* Subline */}
           <motion.p

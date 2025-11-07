@@ -8,8 +8,8 @@ const Contact = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" className="py-12 sm:py-16 md:py-24 bg-secondary" ref={ref}>
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="contact" className="py-12 sm:py-16 md:py-24 bg-secondary overflow-hidden" ref={ref}>
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}

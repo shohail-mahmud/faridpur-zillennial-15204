@@ -29,17 +29,25 @@ const TypingText = ({ text, className = "", delay = 0, speed = 0.05 }: TypingTex
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay }}
       className={className}
+      style={{ 
+        willChange: 'auto',
+        transform: 'translateZ(0)',
+        backfaceVisibility: 'hidden'
+      }}
     >
-      {displayedText}
-      {currentIndex < text.length && (
-        <motion.span
-          animate={{ opacity: [1, 0, 1] }}
-          transition={{ duration: 0.8, repeat: Infinity }}
-          className="inline-block ml-1"
-        >
-          |
-        </motion.span>
-      )}
+      <span style={{ display: 'inline-block', minHeight: '1em' }}>
+        {displayedText}
+        {currentIndex < text.length && (
+          <motion.span
+            animate={{ opacity: [1, 0, 1] }}
+            transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+            className="inline-block ml-1"
+            style={{ width: '2px' }}
+          >
+            |
+          </motion.span>
+        )}
+      </span>
     </motion.div>
   );
 };
