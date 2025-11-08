@@ -1,19 +1,24 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import groundPond from "@/assets/gallery-ground-pond.jpg";
+import zeroPoint from "@/assets/gallery-zero-point.jpg";
+import oldGate from "@/assets/gallery-old-gate.jpg";
+import newGate from "@/assets/gallery-new-gate.jpg";
+import junction from "@/assets/gallery-junction.jpg";
+import mainRoad from "@/assets/gallery-main-road.jpg";
 
 const BounceCards = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  // Placeholder images - replace with real school photos
   const images = [
-    { src: "/placeholder.svg", alt: "School Building Historic View" },
-    { src: "/placeholder.svg", alt: "Students in Classroom" },
-    { src: "/placeholder.svg", alt: "Annual Sports Day" },
-    { src: "/placeholder.svg", alt: "Cultural Program" },
-    { src: "/placeholder.svg", alt: "School Assembly" },
-    { src: "/placeholder.svg", alt: "Science Laboratory" },
+    { src: oldGate, alt: "Old Gate of Faridpur Zilla School" },
+    { src: newGate, alt: "New Gate of Faridpur Zilla School" },
+    { src: zeroPoint, alt: "Zero Point - Historic Landmark" },
+    { src: groundPond, alt: "School Ground near the Pond" },
+    { src: junction, alt: "School Junction with Historic Red Building" },
+    { src: mainRoad, alt: "Main Road of Faridpur Zilla School" },
   ];
 
   return (
@@ -31,6 +36,17 @@ const BounceCards = () => {
           <div className="w-20 sm:w-24 h-1 bg-heritage-gold mx-auto mb-6 sm:mb-8" />
           <p className="text-base sm:text-lg md:text-xl text-foreground/70 max-w-3xl mx-auto px-4">
             Capturing moments from Faridpur Zilla School's rich history
+          </p>
+          <p className="text-sm text-muted-foreground mt-4">
+            Photos courtesy of{" "}
+            <a 
+              href="https://commons.wikimedia.org/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Wikimedia Commons
+            </a>
           </p>
         </motion.div>
 
