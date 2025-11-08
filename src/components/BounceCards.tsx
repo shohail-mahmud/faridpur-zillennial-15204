@@ -57,15 +57,14 @@ const BounceCards = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-elegant hover:shadow-premium transition-shadow duration-300 group"
+              className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-elegant hover:shadow-premium transition-all duration-300 group"
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
             </motion.div>
           ))}
         </div>
