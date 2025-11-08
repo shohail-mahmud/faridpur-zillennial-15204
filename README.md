@@ -56,58 +56,10 @@ npm run build
 
 The built files will be in the `dist/` directory.
 
-## 📦 Deployment
+## Author
+Shohail Mahmud 
+Instagram : @shohailmahmud09 [ https://www.instagram.com/shohailmahmud09/ ]
 
-### Deploy to Vercel (Recommended - FREE)
-
-This project is optimized for Vercel's free tier with zero configuration needed:
-
-1. **Push to GitHub**
-   ```bash
-   git add .
-   git commit -m "Initial commit"
-   git push origin main
-   ```
-
-2. **Deploy on Vercel**
-   - Visit [vercel.com](https://vercel.com)
-   - Click "Import Project"
-   - Select your GitHub repository
-   - Click "Deploy"
-
-That's it! Vercel will auto-detect Vite configuration.
-
-### Vercel Optimization Features
-
-- ✅ Static site generation (no server costs)
-- ✅ Automatic asset optimization
-- ✅ Global CDN distribution
-- ✅ Optimized caching headers via `vercel.json`
-- ✅ Zero bandwidth costs on free tier
-
-### Other Deployment Options
-
-The static build in `dist/` can be deployed to:
-- Netlify
-- GitHub Pages
-- Cloudflare Pages
-- Firebase Hosting
-- Any static hosting service
-
-## 📁 Project Structure
-
-```
-src/
-├── components/        # React components
-│   ├── Navigation.tsx # Transparent navbar
-│   ├── Hero.tsx      # Video hero section
-│   ├── History.tsx   # Timeline & history
-│   └── ...
-├── pages/            # Page components
-├── assets/           # Images and static files
-├── lib/              # Utilities
-└── hooks/            # Custom React hooks
-```
 
 ## ⚡ Performance
 
@@ -115,17 +67,12 @@ src/
 - **Bundle Size**: Optimized and minimal
 - **Loading**: Lazy loading for media
 - **Caching**: Aggressive asset caching
-- **Perfect for**: Vercel free tier limits
 
 ## 🎨 Customization
 
 The design system is defined in:
 - `src/index.css` - CSS variables and theme
 - `tailwind.config.ts` - Tailwind configuration
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
@@ -134,7 +81,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 🙏 Acknowledgments
 
 Built with ❤️ to celebrate 185 years of educational excellence at Faridpur Zilla School.
-
----
-
-**Lovable Project URL**: https://lovable.dev/projects/b77d0ce5-db50-44dd-99d2-00ebc6e76d77
