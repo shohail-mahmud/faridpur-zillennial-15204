@@ -4,11 +4,11 @@ import TypingText from "./TypingText";
 import schoolLogo from "@/assets/school-logo.png";
 const Hero = () => {
     return <section className="relative min-h-screen w-full overflow-hidden flex items-center">
-      {/* Video Background - Zoomed for better coverage */}
+      {/* Video Background - Full screen coverage */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-hero z-10" />
         <iframe 
-          className="absolute top-1/2 left-1/2 w-[140vw] h-[140vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          className="absolute top-1/2 left-1/2 w-[200vw] h-[200vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
           style={{ border: 0, transform: 'translate(-50%, -50%) translateZ(0)', willChange: 'auto' }}
           src="https://www.youtube.com/embed/yaM4KvskYT8?autoplay=1&mute=1&loop=1&playlist=yaM4KvskYT8&controls=0&showinfo=0&modestbranding=1&rel=0" 
           title="Faridpur Zilla School Rag Day 2010" 
@@ -16,15 +16,15 @@ const Hero = () => {
           loading="lazy"
         />
         
-        {/* Video Caption */}
+        {/* Video Caption - Smaller text */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.5 }}
-          className="absolute bottom-4 right-4 z-20 bg-black/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-heritage-gold/30"
+          className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 z-20 bg-black/60 backdrop-blur-sm px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg border border-heritage-gold/30"
         >
-          <p className="text-xs sm:text-sm text-heritage-gold font-medium">
-            Rag Day 2010 - Faridpur Zilla School
+          <p className="text-[10px] sm:text-xs text-heritage-gold font-medium">
+            Rag Day 2010
           </p>
         </motion.div>
       </div>
@@ -60,7 +60,7 @@ const Hero = () => {
               text="Celebrating 185 Years of Faridpur Zilla School"
               className="font-signature text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-heritage-gold mb-4 sm:mb-6 leading-tight"
               delay={0.5}
-              speed={0.003}
+              speed={0.001}
             />
           </div>
 

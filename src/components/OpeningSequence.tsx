@@ -57,50 +57,10 @@ const OpeningSequence = ({ onComplete }: OpeningSequenceProps) => {
                 delay: 0.3,
                 ease: [0.25, 0.46, 0.45, 0.94],
               }}
-              className="font-signature text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-heritage-gold mb-3 sm:mb-4 md:mb-6"
+              className="font-signature text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-heritage-gold"
             >
               Faridpur Zilla School
             </motion.h1>
-
-            {/* Anniversary text */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: 0.6,
-                ease: [0.25, 0.46, 0.45, 0.94],
-              }}
-              className="mb-2 sm:mb-3"
-            >
-              <p className="text-xl sm:text-2xl md:text-4xl font-bold text-primary-foreground">
-                185 Years of Legacy
-              </p>
-            </motion.div>
-
-            {/* Subtitle */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 0.6,
-                delay: 0.9,
-              }}
-              className="text-sm sm:text-base md:text-lg text-primary-foreground/90 font-light tracking-wide"
-            >
-              Celebrating Excellence Since 1840
-            </motion.p>
-
-            {/* Decorative line */}
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{
-                duration: 0.8,
-                delay: 1.2,
-              }}
-              className="w-20 sm:w-24 md:w-32 h-0.5 bg-heritage-gold mx-auto mt-4 sm:mt-6"
-            />
           </div>
         </motion.div>
       )}

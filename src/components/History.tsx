@@ -11,27 +11,47 @@ const History = () => {
     {
       year: "1840",
       title: "Foundation",
-      description: "Faridpur Zilla School was established during the British colonial period, marking the beginning of formal education in the region."
+      description: "Established on January 1, 1840, during British colonial rule as one of the first modern educational institutions in Bengal region."
+    },
+    {
+      year: "1905",
+      title: "Bengal Partition Period",
+      description: "During the partition of Bengal, the school stood as a symbol of unity and continued educational excellence despite political turmoil."
     },
     {
       year: "1947",
       title: "Post-Partition Era",
-      description: "After the partition of India, the school became a leading educational institution in East Pakistan, continuing its mission of excellence."
+      description: "After the partition of India on August 15, 1947, the school became a leading educational institution in East Pakistan."
+    },
+    {
+      year: "1952",
+      title: "Language Movement",
+      description: "Students and teachers actively participated in the Bengali Language Movement, fighting for the recognition of Bengali as a state language."
     },
     {
       year: "1971",
       title: "Liberation War",
-      description: "Our students and teachers played crucial roles in Bangladesh's independence movement, with many making the ultimate sacrifice."
+      description: "During the 1971 Bangladesh Liberation War, students and teachers played heroic roles. Many made the ultimate sacrifice for independence."
     },
     {
-      year: "1990s",
-      title: "Modern Development",
-      description: "Introduction of science laboratories, computer education, and modern facilities while preserving our heritage."
+      year: "1985",
+      title: "Infrastructure Expansion",
+      description: "Major building renovations and additions, including new classrooms, library expansion, and establishment of science laboratories."
+    },
+    {
+      year: "1995",
+      title: "Computer Education",
+      description: "Introduction of computer education and establishment of the first computer lab, bringing digital learning to students."
+    },
+    {
+      year: "2010",
+      title: "Rag Day Tradition",
+      description: "The famous Rag Day celebration became a cherished annual tradition, showcasing student talent and school spirit with colorful processions."
     },
     {
       year: "2025",
       title: "185th Anniversary",
-      description: "Celebrating nearly two centuries of educational excellence, continuing to shape the future of Bangladesh."
+      description: "Celebrating 185 years of educational excellence, producing generations of leaders, scholars, and nation builders who shaped Bangladesh."
     }
   ];
 
