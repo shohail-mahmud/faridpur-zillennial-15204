@@ -5,7 +5,6 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import History from "@/components/History";
 import BounceCards from "@/components/BounceCards";
-import Alumni from "@/components/Alumni";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
