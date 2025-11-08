@@ -39,8 +39,8 @@ const Navigation = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-primary/95 backdrop-blur-md shadow-elegant"
-          : "bg-transparent"
+          ? "bg-primary/80 backdrop-blur-md shadow-elegant"
+          : "bg-black/20 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import HandwritingReveal from "./HandwritingReveal";
+import { Calendar, Award, BookOpen, Users } from "lucide-react";
 
 const History = () => {
   const ref = useRef(null);
@@ -11,47 +11,47 @@ const History = () => {
     {
       year: "1840",
       title: "Foundation",
-      description: "Established on January 1, 1840, during British colonial rule as one of the first modern educational institutions in Bengal region."
+      description: "Founded by District Magistrate Edgar F. Luther as 'English Seminary', becoming one of the first modern educational institutions in Bengal."
+    },
+    {
+      year: "1854",
+      title: "Name Change",
+      description: "Renamed to Faridpur Zilla School, establishing its identity as the premier district-level educational institution."
     },
     {
       year: "1905",
-      title: "Bengal Partition Period",
-      description: "During the partition of Bengal, the school stood as a symbol of unity and continued educational excellence despite political turmoil."
+      title: "Bengal Partition",
+      description: "During the partition of Bengal, the school maintained its academic excellence and served as a center of cultural unity."
     },
     {
       year: "1947",
-      title: "Post-Partition Era",
-      description: "After the partition of India on August 15, 1947, the school became a leading educational institution in East Pakistan."
+      title: "Post-Independence",
+      description: "After the partition of India, became a leading institution in East Pakistan, continuing its tradition of excellence."
     },
     {
       year: "1952",
       title: "Language Movement",
-      description: "Students and teachers actively participated in the Bengali Language Movement, fighting for the recognition of Bengali as a state language."
+      description: "Students and teachers actively participated in the Bengali Language Movement, contributing to the recognition of Bengali."
     },
     {
       year: "1971",
       title: "Liberation War",
-      description: "During the 1971 Bangladesh Liberation War, students and teachers played heroic roles. Many made the ultimate sacrifice for independence."
+      description: "During Bangladesh's Liberation War, the school community played heroic roles, with many making supreme sacrifices."
     },
     {
-      year: "1985",
-      title: "Infrastructure Expansion",
-      description: "Major building renovations and additions, including new classrooms, library expansion, and establishment of science laboratories."
-    },
-    {
-      year: "1995",
-      title: "Computer Education",
-      description: "Introduction of computer education and establishment of the first computer lab, bringing digital learning to students."
+      year: "1990s",
+      title: "Modernization",
+      description: "Major infrastructure development including new buildings, science laboratories, and introduction of computer education."
     },
     {
       year: "2010",
       title: "Rag Day Tradition",
-      description: "The famous Rag Day celebration became a cherished annual tradition, showcasing student talent and school spirit with colorful processions."
+      description: "Annual Rag Day celebrations became a cherished tradition, showcasing student creativity and school spirit."
     },
     {
       year: "2025",
       title: "185th Anniversary",
-      description: "Celebrating 185 years of educational excellence, producing generations of leaders, scholars, and nation builders who shaped Bangladesh."
+      description: "Celebrating 185 years of excellence in education, producing leaders, scholars, and nation-builders for Bangladesh."
     }
   ];
 
@@ -65,13 +65,90 @@ const History = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="font-script text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-primary mb-4 sm:mb-6 px-4">
-            Our Journey Through Time
+            Our History
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-heritage-gold mx-auto mb-6 sm:mb-8" />
           <p className="text-base sm:text-lg md:text-xl text-foreground/70 max-w-3xl mx-auto px-4">
-            From 1840 to today, Faridpur Zilla School has been at the forefront of educational excellence in Bangladesh
+            185 years of educational excellence and nation-building
           </p>
         </motion.div>
+
+        {/* Detailed History Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="max-w-5xl mx-auto mb-16 sm:mb-20"
+        >
+          <div className="bg-card p-6 sm:p-8 md:p-10 rounded-lg shadow-elegant border border-border">
+            <div className="flex items-center gap-3 mb-6">
+              <BookOpen className="w-8 h-8 text-heritage-gold" />
+              <h3 className="font-script text-2xl sm:text-3xl md:text-4xl text-primary">
+                Our Story
+              </h3>
+            </div>
+            
+            <div className="space-y-4 sm:space-y-6 text-foreground/80 leading-relaxed">
+              <p className="text-base sm:text-lg">
+                <strong className="text-primary">Faridpur Zilla School</strong>, established in <strong>1840</strong> by District Magistrate 
+                <strong> Edgar F. Luther</strong>, stands as one of the oldest and most prestigious educational institutions in Bangladesh. 
+                Originally founded as the "English Seminary," it was later renamed Faridpur Zilla School in 1854, marking its position 
+                as the premier district-level school.
+              </p>
+
+              <p className="text-base sm:text-lg">
+                Located in the heart of <strong>Faridpur city</strong>, the school has witnessed and actively participated in nearly 
+                two centuries of Bangladesh's history. From the British colonial period through the partition of India in 1947, 
+                and into the birth of Bangladesh in 1971, Faridpur Zilla School has remained a beacon of educational excellence.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 sm:my-8">
+                <div className="flex items-start gap-3 p-4 bg-secondary/50 rounded-lg">
+                  <Calendar className="w-6 h-6 text-heritage-gold flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-primary mb-1">Established</h4>
+                    <p className="text-sm">1840 by Edgar F. Luther</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 p-4 bg-secondary/50 rounded-lg">
+                  <Award className="w-6 h-6 text-heritage-gold flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-primary mb-1">Recognition</h4>
+                    <p className="text-sm">Government High School</p>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-base sm:text-lg">
+                During the <strong>1952 Language Movement</strong>, students and teachers of Faridpur Zilla School played vital roles 
+                in the struggle for Bengali language recognition. The school continued this tradition of leadership during the 
+                <strong> 1971 Liberation War</strong>, when members of the school community made supreme sacrifices for Bangladesh's independence.
+              </p>
+
+              <p className="text-base sm:text-lg">
+                Throughout its history, the school has maintained its commitment to academic excellence while adapting to modern 
+                educational needs. The introduction of science laboratories, computer education in the 1990s, and continuous 
+                infrastructure development has kept the institution at the forefront of education in Bangladesh.
+              </p>
+
+              <p className="text-base sm:text-lg">
+                Today, Faridpur Zilla School continues its legacy, having produced countless distinguished alumni who have excelled 
+                in various fields including politics, literature, science, and public service, contributing significantly to the 
+                development of Bangladesh.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Timeline Section */}
+        <div className="text-center mb-8 sm:mb-12">
+          <h3 className="font-script text-2xl sm:text-3xl md:text-4xl text-primary mb-2">
+            Historical Timeline
+          </h3>
+          <p className="text-sm sm:text-base text-foreground/60">
+            Key milestones in our 185-year journey
+          </p>
+        </div>
 
         <div className="max-w-5xl mx-auto">
           {milestones.map((milestone, index) => (
