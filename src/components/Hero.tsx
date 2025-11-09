@@ -8,22 +8,12 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-hero z-10" />
         <iframe 
-          className="absolute top-0 left-0 w-full h-full pointer-events-none"
-          style={{ 
-            border: 0, 
-            width: '100vw',
-            height: '56.25vw',
-            minWidth: '177.78vh',
-            minHeight: '100vh',
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)'
-          }}
-          src="https://www.youtube.com/embed/yaM4KvskYT8?autoplay=1&mute=1&loop=1&playlist=yaM4KvskYT8&controls=0&showinfo=0&modestbranding=1&rel=0&playsinline=1" 
+          className="absolute top-1/2 left-1/2 w-[200vw] h-[200vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          style={{ border: 0, transform: 'translate(-50%, -50%) translateZ(0)', willChange: 'auto' }}
+          src="https://www.youtube.com/embed/yaM4KvskYT8?autoplay=1&mute=1&loop=1&playlist=yaM4KvskYT8&controls=0&showinfo=0&modestbranding=1&rel=0" 
           title="Faridpur Zilla School Rag Day 2010" 
           allow="autoplay; encrypted-media"
-          loading="eager"
+          loading="lazy"
         />
         
         {/* Video Caption - Smaller text */}
